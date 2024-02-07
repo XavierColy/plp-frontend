@@ -1,0 +1,84 @@
+#overview {
+    display: flex;
+    gap: 15px;
+}
+
+#overview-main h1 {
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+#divider {
+    height: 0;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+main {
+    display: flex;
+    gap: 80px;
+}
+
+#left-section {
+    margin-left: 20px;
+}
+
+main h2 {
+    font-size: 30px;
+}
+
+#host-availability {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(30px, auto);
+    text-align: center;
+    width: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.availability-header {
+    color: var(--card-header);
+    font-size: 16px;
+}
+
+.availability-footer {
+    font-size: 32px;
+}
+
+#hosts {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 55px;
+}
+
+.host {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 2px var(--green-bright);
+    background-color: white;
+    width: 128px;
+    height: 128px;
+}
+
+.host > p:first-child {
+    color: var(--card-header);
+    margin-bottom: 30px;
+}
+
+#date-sort {
+    border-radius: 20px;
+    width: 128px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+#alerts {
+    padding: 10px;
+}
