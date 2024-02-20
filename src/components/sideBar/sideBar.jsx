@@ -21,7 +21,7 @@ export default function SideBar() {
             </div>
             <div id={'bottom-bar-bottom'}>
                 <RiAccountCircleFill className={"icon"}/>
-                <span>Antoine</span>
+                <span>Admin</span>
             </div>
         </nav>
     );

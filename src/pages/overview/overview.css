@@ -1,6 +1,11 @@
 #overview {
     display: flex;
-    gap: 15px;
+    /*gap: 15px;*/
+}
+
+#overview-main {
+    margin-left: 16%;
+    margin-top: 0;
 }
 
 #overview-main h1 {
@@ -11,13 +16,14 @@
 
 #divider {
     height: 0;
-    width: 100%;
+    /*width: 100%;*/
     border: 1px solid gray;
+    /*todo margin right*/
 }
 
 main {
     display: flex;
-    gap: 140px;
+    gap: 100px;
 }
 
 #left-section {
