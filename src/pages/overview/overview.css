@@ -1,33 +1,26 @@
-#overview {
-    display: flex;
-    /*gap: 15px;*/
-}
-
 #overview-main {
-    margin-left: 16%;
+    margin-left: 280px;
     margin-top: 0;
+    padding-left: 40px;
+    padding-top: 50px;
+    padding-right: 40px;
 }
 
 #overview-main h1 {
-    margin-left: 20px;
-    margin-top: 50px;
     font-size: 35px;
 }
 
 #divider {
     height: 0;
-    /*width: 100%;*/
     border: 1px solid gray;
-    /*todo margin right*/
 }
-
 main {
     display: flex;
-    gap: 100px;
+    justify-content: space-between;
 }
 
 #left-section {
-    margin-left: 20px;
+    min-width: 500px;
 }
 
 main h2 {
@@ -87,6 +80,7 @@ main h2 {
 
 #alerts {
     padding: 10px;
+    width: 910px;
 }
 
 #alerts > div:first-child {
@@ -124,7 +118,3 @@ td {
     padding-left: 10px;
     padding-right: 0;
 }
-
-/*.alert-level + td {*/
-/*    padding-left: 5px;*/
-/*}*/
