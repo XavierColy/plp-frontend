@@ -3,11 +3,13 @@ import {FaQuestionCircle} from 'react-icons/fa';
 import {IoMdSettings} from 'react-icons/io';
 import {RiAccountCircleFill} from 'react-icons/ri';
 import {HiMiniSquares2X2} from 'react-icons/hi2';
+import {useNavigate} from 'react-router-dom';
 export default function SideBar() {
+    const navigate = useNavigate();
     return(
         <nav>
-            <h1>Superv'INSA</h1>
-            <div>
+            <h1 onClick={()=>{navigate('/')}}>Superv'INSA</h1>
+            <div onClick={()=>{navigate('/')}}>
                 <HiMiniSquares2X2 className={"icon"}/>
                 <span>Accueil</span>
             </div>
