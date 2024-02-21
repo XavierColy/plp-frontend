@@ -49,7 +49,7 @@ export default function Snmp() {
                         <div id={"settings"}>
                             <div className={"card"}>
                                 <IoMdTime/>
-                                <select defaultValue={"24h"}
+                                <select defaultValue={from}
                                         onChange={v => setFrom(v.target.value)}>
                                     <option value={"5m"}>Dernières 5 minutes</option>
                                     <option value={"15m"}>Dernières 15 minutes</option>
@@ -64,7 +64,7 @@ export default function Snmp() {
                             </div>
                             <div className={"card"}>
                                 <LuRefreshCcw/>
-                                <select defaultValue={"10s"}
+                                <select defaultValue={refreshTime}
                                         onChange={v => setRefreshTime(v.target.value)}>
                                     <option value={"off"}>Non</option>
                                     <option value={"5s"}>5s</option>
