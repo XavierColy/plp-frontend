@@ -1,52 +1,10 @@
-#hostPage {
-    display: flex;
-    /*gap: 15px;*/
-}
-
-iframe {
-    border: none;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 4px gray;
-}
-
-main#node {
-    margin-left: 20px;
-    gap: 40px;
-}
-
-main section:first-child {
-    width: 50%;
-}
-
-#overview-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 20px;
-    width: 750px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 8px;
-}
-
 header {
     display: flex;
     justify-content: space-between;
 }
 
-#overview-main h1 {
-    margin-left: 20px;
-    /*margin-top: 50px;*/
-    font-size: 35px;
-}
-
 #settings {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-right: 200px;
     display: flex;
     gap: 30px;
@@ -54,13 +12,7 @@ header {
     height: max-content;
 }
 
-.fle-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#select-div{
+#settings div{
     box-shadow: 0 4px 4px var(--primary-light) !important;
     border: 1px solid var(--primary-light);
     display: flex;
@@ -71,9 +23,46 @@ header {
 
 select {
     outline: none;
-    /*padding: 10px;*/
     cursor: pointer;
     border: none;
     border-radius: inherit;
     background-color: inherit;
 }
+
+#overview-sec {
+    min-width: 500px;
+}
+
+#overview-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    width: 650px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+
+.fle-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+iframe {
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px gray;
+    margin: 0;
+}
+
+#overview-main > section {
+    margin-top: 50px;
+}
+
