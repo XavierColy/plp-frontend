@@ -3,6 +3,7 @@ import {Route, Routes} from 'react-router-dom';
 import AuthProvider from './utils/authContext.context';
 import Overview from './pages/overview/overview';
 import HostPage from './pages/hostPage/nodePage';
+import Snmp from './pages/snmp/snmp';
 
 function App() {
     return (
@@ -10,7 +11,8 @@ function App() {
             <div className="App">
                 <Routes>
                     <Route path={'/'} element={<Overview/>}/>
-                    <Route path={'/test'} element={<HostPage/>}/>
+                    <Route path={'/nodeExporter'} element={<HostPage/>}/>
+                    <Route path={'/snmpExporter'} element={<Snmp/>}/>
                 </Routes>
             </div>
         </AuthProvider>
