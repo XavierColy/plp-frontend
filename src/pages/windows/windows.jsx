@@ -11,6 +11,8 @@ export default function Windows() {
     const [refreshTime, setRefreshTime] = useState('10s');
     const [from, setFrom] = useState('24h');
     const [url, setUrl] = useState(`http://${vmIp}:3000/d-solo/PPZJb6qMk-2/windows-exporter-node?orgId=1&theme=light&from=now-${from}&to=now&refresh=${refreshTime}`);
+    const [sectionsToDisplay, setSectionsToDisplay] = useState(0);
+
 
     useEffect(() => {
         if (url.includes("&refresh")) {
@@ -32,6 +34,10 @@ export default function Windows() {
             }
         }
     }, [refreshTime, url]);
+
+    const handleClickOnSec = (id) => {
+        sectionsToDisplay === id ? setSectionsToDisplay(0) : setSectionsToDisplay(id);
+    }
 
     useEffect(() => {
         const re = new RegExp("(&from=now-)[0-9]+[mhd](&to=now)");
@@ -88,10 +94,10 @@ export default function Windows() {
                         <h2>Vue d'ensemble</h2>
                         <div id={"overview-section"}>
                             <div className={"fle-col"}>
-                                <iframe src={url + "&panelId=23763571993"} width="700" height="200"></iframe>
+                                <iframe src={url + "&panelId=23763571993"} width="400" height="200"></iframe>
                                 <div>
-                                    <iframe src={url + "&panelId=23763572001"} width="350" height="150"></iframe>
-                                    <iframe src={url + "&panelId=23763572004"} width="350" height="150"></iframe>
+                                    <iframe src={url + "&panelId=23763572001"} width="180" height="150"></iframe>
+                                    <iframe src={url + "&panelId=23763572004"} width="180" height="150"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -139,40 +145,48 @@ export default function Windows() {
                 <section>
                     <h2></h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=4"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=14"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=8"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=15"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=10"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=11"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=23763571997"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=9"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=23763571999"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=18"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=4"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=14"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=8"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=15"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=10"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=11"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=23763571997"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=9"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=23763571999"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=18"} width="600" height="358"></iframe>
                     </div>
                 </section>
-                <section>
-                    <h2>System Thread</h2>
-                    <div className={"row"}>
-                        <iframe src={url + "&panelId=12"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=26"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=22"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=20"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=24"} width="700" height="358"></iframe>
+                <section className={"sec"} onClick={() => handleClickOnSec(1)}>
+                    <div>
+                        <FaCaretDown/>
+                        <h2>System Thread</h2>
                     </div>
+                    {sectionsToDisplay === 1 ?
+                        <div className={"row"}>
+                            <iframe src={url + "&panelId=12"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=26"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=22"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=20"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=24"} width="600" height="358"></iframe>
+                        </div> : <></>}
                 </section>
-                <section>
-                    <h2>Miscellenous</h2>
-                    <div className={"row"}>
-                        <iframe src={url + "&panelId=23763572003"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=7"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=17"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=16"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=23763571995"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=28"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=30"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=32"} width="1700" height="358"></iframe>
+                <section className={"sec"} onClick={() => handleClickOnSec(2)}>
+                    <div>
+                        <FaCaretDown/>
+                        <h2>Miscellenous</h2>
                     </div>
+                    {sectionsToDisplay === 2 ?
+                        <div className={"row"}>
+                            <iframe src={url + "&panelId=23763572003"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=7"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=17"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=16"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=23763571995"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=28"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=30"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=32"} width="1200" height="358"></iframe>
+                        </div> : <></>}
                 </section>
             </div>
         </div>

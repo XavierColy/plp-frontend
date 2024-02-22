@@ -88,14 +88,14 @@ export default function Snmp() {
                         <h2>Vue d'ensemble</h2>
                         <div id={"overview-section"}>
                             <div className={"fle-col"}>
-                                <iframe src={url + "&panelId=24"} width="300" height="100"></iframe>
-                                <iframe src={url + "&panelId=23"} width="300" height="100"></iframe>
+                                <iframe src={url + "&panelId=24"} width="200" height="100"></iframe>
+                                <iframe src={url + "&panelId=23"} width="200" height="100"></iframe>
                             </div>
                             <div className={"fle-col"}>
-                                <iframe src={url + "&panelId=25"} width="300" height="100"></iframe>
+                                <iframe src={url + "&panelId=25"} width="200" height="100"></iframe>
                                 <div>
-                                    <iframe src={url + "&panelId=28"} width="150" height="100"></iframe>
-                                    <iframe src={url + "&panelId=29"} width="150" height="100"></iframe>
+                                    <iframe src={url + "&panelId=28"} width="100" height="100"></iframe>
+                                    <iframe src={url + "&panelId=29"} width="100" height="100"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -142,10 +142,10 @@ export default function Snmp() {
                 </main>
                 <section>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=32"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=31 "} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=26"} width="700" height="358"></iframe>
-                        <iframe src={url + "&panelId=21"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=32"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=31 "} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=26"} width="600" height="358"></iframe>
+                        <iframe src={url + "&panelId=21"} width="600" height="358"></iframe>
                     </div>
                 </section>
 

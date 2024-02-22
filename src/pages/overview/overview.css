@@ -1,11 +1,11 @@
 #overview-main {
-    margin-left: 280px;
+    margin-left: 200px;
     margin-top: 0;
     padding: 50px 40px 10px;
 }
 
 #overview-main h1 {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #divider {
@@ -23,7 +23,7 @@ main {
 }
 
 main h2 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #host-availability {

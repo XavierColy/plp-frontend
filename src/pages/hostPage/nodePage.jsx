@@ -44,7 +44,6 @@ export default function NodePage() {
 
     const handleClickOnSec = (id) => {
         sectionsToDisplay === id ? setSectionsToDisplay(0) : setSectionsToDisplay(id);
-
     }
 
     return (
@@ -95,21 +94,21 @@ export default function NodePage() {
                     <section id={"overview-sec"}>
                         <h2>Vue d'ensemble</h2>
                         <div id={"overview-section"}>
-                            <iframe src={url + "&panelId=20"} width="200" height="144"></iframe>
-                            <iframe src={url + "&panelId=155"} width="200" height="144"></iframe>
-                            <iframe src={url + "&panelId=19"} width="200" height="144"></iframe>
-                            <iframe src={url + "&panelId=16"} width="200" height="144"></iframe>
-                            <iframe src={url + "&panelId=21"} width="200" height="144"></iframe>
-                            <iframe src={url + "&panelId=154"} width="200" height="144"></iframe>
+                            <iframe src={url + "&panelId=20"} width="130" height="144"></iframe>
+                            <iframe src={url + "&panelId=155"} width="130" height="144"></iframe>
+                            <iframe src={url + "&panelId=19"} width="130" height="144"></iframe>
+                            <iframe src={url + "&panelId=16"} width="130" height="144"></iframe>
+                            <iframe src={url + "&panelId=21"} width="130" height="144"></iframe>
+                            <iframe src={url + "&panelId=154"} width="130" height="144"></iframe>
                             <div className={"fle-col"}>
-                                <iframe src={url + "&panelId=14"} width="300" height="100"></iframe>
-                                <iframe src={url + "&panelId=23"} width="300" height="100"></iframe>
+                                <iframe src={url + "&panelId=14"} width="200" height="100"></iframe>
+                                <iframe src={url + "&panelId=23"} width="200" height="100"></iframe>
                             </div>
                             <div className={"fle-col"}>
-                                <iframe src={url + "&panelId=15"} width="300" height="100"></iframe>
+                                <iframe src={url + "&panelId=15"} width="200" height="100"></iframe>
                                 <div>
-                                    <iframe src={url + "&panelId=75"} width="150" height="100"></iframe>
-                                    <iframe src={url + "&panelId=18"} width="150" height="100"></iframe>
+                                    <iframe src={url + "&panelId=75"} width="100" height="100"></iframe>
+                                    <iframe src={url + "&panelId=18"} width="100" height="100"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -161,10 +160,10 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 1 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=77"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=78"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=74"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=152"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=77"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=78"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=74"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=152"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -175,14 +174,14 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 2  ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=3"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=24"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=84"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=156"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=229"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=42"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=127"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=319"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=3"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=24"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=84"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=156"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=229"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=42"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=127"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=319"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -193,21 +192,21 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 3 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=136"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=135"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=191"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=130"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=138"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=131"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=70"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=159"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=129"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=160"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=140"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=71"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=128"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=137"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=132"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=136"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=135"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=191"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=130"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=138"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=131"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=70"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=159"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=129"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=160"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=140"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=71"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=128"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=137"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=132"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -218,10 +217,10 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 4 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=176"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=22"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=175"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=307"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=176"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=22"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=175"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=307"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -232,10 +231,10 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 5 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=260"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=291"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=168"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=294"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=260"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=291"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=168"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=294"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -246,13 +245,13 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 6 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=62"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=315"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=148"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=149"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=313"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=305"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=314"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=62"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=315"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=148"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=149"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=313"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=305"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=314"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -263,15 +262,15 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 7  ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=8"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=7"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=321"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=322"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=259"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=306"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=151"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=308"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=64"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=8"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=7"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=321"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=322"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=259"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=306"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=151"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=308"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=64"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -282,9 +281,9 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 8 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=158"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=300"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=302"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=158"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=300"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=302"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -295,8 +294,8 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 9 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=297"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=298"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=297"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=298"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -307,14 +306,14 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 10 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=9"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=33"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=37"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=35"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=133"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=36"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=34"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=301"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=9"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=33"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=37"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=35"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=133"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=36"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=34"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=301"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -325,11 +324,11 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 11 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=43"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=41"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=28"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=219"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=44"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=43"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=41"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=28"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=219"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=44"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -340,23 +339,23 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 12 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=60"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=142"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=143"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=141"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=146"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=144"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=145"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=231"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=232"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=61"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=230"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=288"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=280"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=289"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=290"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=310"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=309"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=60"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=142"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=143"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=141"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=146"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=144"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=145"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=231"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=232"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=61"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=230"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=288"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=280"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=289"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=290"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=310"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=309"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -367,11 +366,11 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 13 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=63"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=124"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=125"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=220"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=126"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=63"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=124"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=125"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=220"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=126"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -382,18 +381,18 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 14 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=221"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=81"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=115"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=50"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=55"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=109"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=299"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=104"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=85"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=91"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=82"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=320"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=221"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=81"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=115"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=50"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=55"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=109"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=299"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=104"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=85"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=91"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=82"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=320"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
@@ -404,8 +403,8 @@ export default function NodePage() {
                     </div>
                     {sectionsToDisplay === 15 ?
                         <div className={"row"}>
-                            <iframe src={url + "&panelId=40"} width="700" height="358"></iframe>
-                            <iframe src={url + "&panelId=157"} width="700" height="358"></iframe>
+                            <iframe src={url + "&panelId=40"} width="600" height="358"></iframe>
+                            <iframe src={url + "&panelId=157"} width="600" height="358"></iframe>
                         </div> : <></>
                     }
                 </section>
