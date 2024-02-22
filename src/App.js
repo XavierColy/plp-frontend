@@ -13,6 +13,8 @@ function App() {
                     <Route path={'/'} element={<Overview/>}/>
                     <Route path={'/nodeExporter'} element={<HostPage/>}/>
                     <Route path={'/snmpExporter'} element={<Snmp/>}/>
+                    <Route path={'/vm'} element={<Vm/>}/>
+                    <Route path={'/windows'} element={<Windows/>}/>
                 </Routes>
             </div>
         </AuthProvider>
