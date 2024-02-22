@@ -10,7 +10,7 @@ export default function Snmp() {
     const hostname = "FOG Server";
     const [refreshTime, setRefreshTime] = useState('10s');
     const [from, setFrom] = useState('24h');
-    const [url, setUrl] = useState(`http://${vmIp}:3000/d-solo/M-j9hgeZz/snmp-exporter-internal-stats?orgId=1&refresh=${refreshTime}&theme=light&from=now-${from}&to=now`);
+    const [url, setUrl] = useState(`http://${vmIp}:3000/d-solo/7qKD6I1Wk/snmp-stats?orgId=1&refresh=${refreshTime}&theme=light&from=now-${from}&to=now`);
 
     useEffect(() => {
         if (url.includes("&refresh")) {
@@ -88,14 +88,14 @@ export default function Snmp() {
                         <h2>Vue d'ensemble</h2>
                         <div id={"overview-section"}>
                             <div className={"fle-col"}>
-                                <iframe src={url + "&panelId=6"} width="300" height="100"></iframe>
-                                <iframe src={url + "&panelId=31"} width="300" height="100"></iframe>
+                                <iframe src={url + "&panelId=24"} width="300" height="100"></iframe>
+                                <iframe src={url + "&panelId=23"} width="300" height="100"></iframe>
                             </div>
                             <div className={"fle-col"}>
-                                <iframe src={url + "&panelId=4"} width="300" height="100"></iframe>
+                                <iframe src={url + "&panelId=25"} width="300" height="100"></iframe>
                                 <div>
-                                    <iframe src={url + "&panelId=33"} width="150" height="100"></iframe>
-                                    <iframe src={url + "&panelId=35"} width="150" height="100"></iframe>
+                                    <iframe src={url + "&panelId=28"} width="150" height="100"></iframe>
+                                    <iframe src={url + "&panelId=29"} width="150" height="100"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -141,32 +141,11 @@ export default function Snmp() {
                     </section>
                 </main>
                 <section>
-                    <h2>Ressources</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=26"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=27 "} width="800" height="358"></iframe>
-                    </div>
-                </section>
-                <section>
-                    <h2>Durations</h2>
-                    <div className={"row"}>
-                        <iframe src={url + "&panelId=10"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=12"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=18"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=19"} width="800" height="358"></iframe>
-                    </div>
-                </section>
-                <section>
-                    <h2>Walks</h2>
-                    <div className={"row"}>
-                        <iframe src={url + "&panelId=21"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=23"} width="800" height="358"></iframe>
-                    </div>
-                </section>
-                <section>
-                    <h2>Build Info</h2>
-                    <div className={"row"}>
-                        <iframe src={url + "&panelId=2"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=32"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=31 "} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=26"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=21"} width="700" height="358"></iframe>
                     </div>
                 </section>
 

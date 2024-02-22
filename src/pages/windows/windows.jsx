@@ -139,39 +139,39 @@ export default function Windows() {
                 <section>
                     <h2></h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=4"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=14"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=8"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=15"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=10"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=11"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=23763571997"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=9"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=23763571999"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=18"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=4"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=14"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=8"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=15"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=10"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=11"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=23763571997"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=9"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=23763571999"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=18"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>System Thread</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=12"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=26"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=22"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=20"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=24"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=12"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=26"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=22"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=20"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=24"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>Miscellenous</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=23763572003"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=7"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=17"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=16"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=23763571995"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=28"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=30"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=32"} width="1800" height="358"></iframe>
+                        <iframe src={url + "&panelId=23763572003"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=7"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=17"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=16"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=23763571995"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=28"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=30"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=32"} width="1700" height="358"></iframe>
                     </div>
                 </section>
             </div>

@@ -145,99 +145,99 @@ export default function Vm() {
                 <section>
                     <h2>Overview</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=2"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=6"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=12"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=8"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=52"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=104"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=2"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=6"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=12"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=8"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=52"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=104"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>Resource Usage</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=66"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=138"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=64"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=122"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=117"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=204"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=68"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=119"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=70"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=120"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=66"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=138"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=64"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=122"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=117"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=204"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=68"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=119"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=70"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=120"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>Troubleshooting</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=102"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=108"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=142"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=107"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=170"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=116"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=144"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=58"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=183"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=135"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=102"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=108"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=142"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=107"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=170"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=116"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=144"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=58"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=183"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=135"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>Interconnection</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=76"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=86"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=80"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=78"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=82"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=74"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=76"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=86"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=80"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=78"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=82"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=74"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>Vmstorage</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=100"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=113"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=151"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=167"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=141"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=133"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=54"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=55"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=20"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=22"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=202"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=14"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=206"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=100"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=113"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=151"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=167"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=141"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=133"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=54"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=55"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=20"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=22"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=202"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=14"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=206"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>Vmselect</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=92"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=95"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=163"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=165"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=178"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=180"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=179"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=181"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=93"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=207"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=92"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=95"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=163"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=165"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=178"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=180"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=179"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=181"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=93"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=207"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
                     <h2>Vminsert</h2>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=97"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=99"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=185"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=187"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=139"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=114"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=208"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=88"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=97"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=99"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=185"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=187"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=139"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=114"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=208"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=88"} width="700" height="358"></iframe>
                     </div>
                 </section>
                 <section>
@@ -245,13 +245,13 @@ export default function Vm() {
                     <p>Drilldown row is used by other panels on the dashboard to show more detailed metrics
                         per-instance.</p>
                     <div className={"row"}>
-                        <iframe src={url + "&panelId=189"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=190"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=192"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=196"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=200"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=201"} width="800" height="358"></iframe>
-                        <iframe src={url + "&panelId=203"} width="800" height="358"></iframe>
+                        <iframe src={url + "&panelId=189"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=190"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=192"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=196"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=200"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=201"} width="700" height="358"></iframe>
+                        <iframe src={url + "&panelId=203"} width="700" height="358"></iframe>
                     </div>
                 </section>
             </div>
