@@ -8,6 +8,7 @@ import Vm from './pages/vm/vm';
 import Windows from './pages/windows/windows';
 import LoginPage from './pages/login/loginPage';
 import AuthGuard from './utils/authGuard';
+import ChangePasswd from './pages/login/changePasswd';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                         <Route path={'/snmpExporter'} element={<Snmp/>}/>
                         <Route path={'/vm'} element={<Vm/>}/>
                         <Route path={'/windows'} element={<Windows/>}/>
+                        <Route path={'changePasswd'} element={<ChangePasswd/>}/>
                     </Route>
                 </Routes>
             </div>

@@ -17,11 +17,11 @@ export default function SideBar() {
                 <FaQuestionCircle className={"icon"}/>
                 <span>Aide</span>
             </div>
-            <div>
+            <div onClick={()=>navigate('/changePasswd')}>
                 <IoMdSettings className={"icon"}/>
                 <span>Paramètres</span>
             </div>
-            <div id={'bottom-bar-bottom'}>
+            <div id={'bottom-bar-bottom'} onClick={()=>{localStorage.clear(); navigate('/login')}}>
                 <RiAccountCircleFill className={"icon"}/>
                 <span>Admin</span>
             </div>
