@@ -55,7 +55,7 @@ export default function NodePage() {
             <div id={"overview-main"}>
                 <div>
                     <header>
-                        <h1>{host.hostname === "" ? '' : host.hostname + ' : ' }Vue d'ensemble</h1>
+                        <h1>{host ? (host.hostname === "" ? '' : host.hostname + ' : ') : '' }Vue d'ensemble</h1>
                         <div id={"settings"}>
                             <div className={"card"}>
                                 <IoMdTime/>

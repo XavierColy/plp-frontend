@@ -1,10 +1,10 @@
 import './sideBar.css';
 import {FaQuestionCircle} from 'react-icons/fa';
-import {IoMdSettings} from 'react-icons/io';
 import {RiAccountCircleFill} from 'react-icons/ri';
 import {HiMiniSquares2X2} from 'react-icons/hi2';
 import {useNavigate} from 'react-router-dom';
 import {PiComputerTowerBold} from 'react-icons/pi';
+
 export default function SideBar() {
     const navigate = useNavigate();
     return(
@@ -18,7 +18,7 @@ export default function SideBar() {
                 <PiComputerTowerBold className={"icon"}/>
                 <span>Hôtes</span>
             </div>
-            <div id={'bottom-bar-top'}>
+            <div id={'bottom-bar-top'} onClick={()=>navigate('/help')}>
                 <FaQuestionCircle className={"icon"}/>
                 <span>Aide</span>
             </div>

@@ -8,6 +8,7 @@ import LoginPage from './pages/login/loginPage';
 import AuthGuard from './utils/authGuard';
 import NodePage from './pages/nodePage/nodePage';
 import HostPage from './pages/hostPage/hostPage';
+import Help from './pages/help/help';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                         <Route path={'/snmpExporter'} element={<Snmp/>}/>
                         <Route path={'/windows'} element={<Windows/>}/>
                         <Route path={'/hosts'} element={<HostPage/>}/>
+                        <Route path={"/help"} element={<Help/>}/>
                     </Route>
                 </Routes>
             </div>
