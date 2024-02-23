@@ -3,12 +3,12 @@ import {LuRefreshCcw} from 'react-icons/lu';
 import {FaCaretDown} from 'react-icons/fa';
 import {useEffect, useState} from 'react';
 import {IoMdTime} from 'react-icons/io';
-import {useLocation} from 'react-router-dom';
+import {useLocation, useParams} from 'react-router-dom';
 
 export default function Windows() {
     const hostIp = useLocation().state.hostIp;
     const vmIp = 'localhost';
-    const hostname = "FOG Server";
+    const {hostname} = useParams();
     const [refreshTime, setRefreshTime] = useState('10s');
     const [from, setFrom] = useState('24h');
     const [url, setUrl] = useState(`http://${vmIp}:3000/d-solo/PPZJb6qMk-2/windows-exporter-node?orgId=1&theme=light&from=now-${from}&to=now&refresh=${refreshTime}`);

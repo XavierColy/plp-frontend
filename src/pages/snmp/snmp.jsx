@@ -6,9 +6,7 @@ import {IoMdTime} from 'react-icons/io';
 import {useLocation} from 'react-router-dom';
 
 export default function Snmp() {
-    const hostIp = useLocation().state.hostIp;
     const vmIp = 'localhost';
-    const hostname = "FOG Server";
     const [refreshTime, setRefreshTime] = useState('10s');
     const [from, setFrom] = useState('24h');
     const [url, setUrl] = useState(`http://${vmIp}:3000/d-solo/7qKD6I1Wk/snmp-stats?orgId=1&refresh=${refreshTime}&theme=light&from=now-${from}&to=now`);
@@ -46,7 +44,7 @@ export default function Snmp() {
             <div id={"overview-main"}>
                 <div>
                     <header>
-                        <h1>{hostname} : Vue d'ensemble</h1>
+                        <h1>SNMP : Vue d'ensemble</h1>
                         <div id={"settings"}>
                             <div className={"card"}>
                                 <IoMdTime/>

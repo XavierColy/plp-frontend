@@ -1,15 +1,14 @@
 import React, {createContext, useState} from 'react'
 
-export const authContext = createContext({});
+export const hostsContext = createContext({});
 
 export default function AuthProvider(props) {
-    const [authUser, setAuthUser] = useState({})
+    const [hosts, setHosts] = useState([])
 
     const value = {
-        authUser,
-        setAuthUser
+        hosts, setHosts
     }
     return (
-        <authContext.Provider value={value} {...props}/>
+        <hostsContext.Provider value={value} {...props}/>
     )
 }
