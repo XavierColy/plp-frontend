@@ -1,7 +1,6 @@
 import SideBar from '../../components/sideBar/sideBar';
 import './overview.css'
 import {FaCaretDown} from 'react-icons/fa';
-import jsyaml from "js-yaml";
 import yaml from './vmagent.yml'
 import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
@@ -15,33 +14,70 @@ export default function Overview() {
         fetch(yaml)
             .then(r => r.text())
             .then((yam) => {
-                const hotes = [];
-                let json = jsyaml.load(yam);
-                for (const job of json.scrape_configs) {
-                    const jobNames = ["node_exporter", "windows_exporter_client", "windows_exporter_server", "snmp_exporter"];
-                    console.log(job.job_name);
-                    if (jobNames.includes(job.job_name)) {
-                        console.log(jobNames.includes(job.job_name));
-                        for (const config of job.static_configs) {
-                            for (const url of config.targets) {
-                                console.log(url);
-                                const re = new RegExp('https?:\/\/')
-                                const re2 = new RegExp(':[0-9]{4}')
-                                let ip = url.replace(re, '');
-                                ip = ip.replace(re2, '');
-                                hotes.push({ip: ip, exporter: job.job_name});
-                            }
+
+                let output = [];
+                let jobName = '';
+                let exporterFound = false;
+                let targetsFound = false;
+
+                // Séparer le fichier en lignes
+                const lines = yam.split('\n');
+
+                // Parcourir chaque ligne du fichier
+                lines.forEach((line) => {
+                    // Ignorer les lignes vides ou commentées
+                    if (line.trim() === '' || line.trim().startsWith('#')) return;
+
+                    // Vérifier si la ligne commence par un tiret car seule ces lignes contiennent les informations nécessaires
+                    const match = line.match(/^\s*-.*$/);
+                    if (!match) return;
+
+                    // Extraire le nom du job s'il existe
+                    const jobMatch = line.match(/^\s*-?\s*job_name:\s*(\S+)/);
+                    if (jobMatch) {
+                        jobName = jobMatch[1];
+                        exporterFound = jobName.includes('exporter');
+                        if (!exporterFound) {
+                            jobName = '';
+                        } else {
+                            targetsFound = false; // Réinitialiser la recherche des cibles
+                        }
+                        return;
+                    }
+
+                    // Si le jobname ne contient pas la chaîne "exporter",
+                    if (!exporterFound) {
+                        return;
+                    }
+
+                    // Vérifier si nous sommes dans la section des cibles
+                    if (line.includes('targets')) {
+                        targetsFound = true; // Les lignes suivantes seront possiblement les cibles
+                        return; // Ne rien faire pour la ligne "targets:"
+                    }
+
+                    if (targetsFound) {
+                        // On sait qu'il y a des cibles
+                        // Extraire les adresses IP, types de machines et hostnames
+                        const ipMatch = line.match(
+                            /^\s*-?\s*"?https?:\/\/?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"?|^\s*-?\s*"?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"?/
+                        );
+                        if (ipMatch) {
+                            const ip = ipMatch[1] || ipMatch[2];
+                            const machineMatch = line.match(/Machine:\s*(.*?)\s*Hostname:/);
+                            const machine = machineMatch ? machineMatch[1].trim() : '';
+                            const hostnameMatch = line.match(/Hostname:\s*(.*)/);
+                            const hostname = hostnameMatch ? hostnameMatch[1].trim() : '';
+                            output.push({jobName, ip, machine, hostname});
                         }
                     }
-                }
-                console.log(hotes);
-                setHosts(hotes);
-            }).then(() => console.log(hosts));
-
-    }, [hosts]);
+                });
+                setHosts(output);
+            });
+    }, []);
 
     const setBoxShadow = (hote) => {
-        switch (hote.exporter) {
+        switch (hote.jobName) {
             case "node_exporter":
                 return {boxShadow: '2px 4px 4px 2px var(--primary-light)'};
             case "windows_exporter_client":
@@ -50,11 +86,13 @@ export default function Overview() {
                 return {boxShadow: '2px 4px 4px 2px var(--red-light)'};
             case "snmp_exporter":
                 return {boxShadow: '2px 4px 4px 2px var(--green-bright)'};
+            default:
+                return {boxShadow: '2px 4px 4px 2px var(--gray)'};
         }
     }
 
     const handleNav = (hote) => {
-        switch (hote.exporter) {
+        switch (hote.jobName) {
             case "node_exporter":
                 navigate('/nodeExporter', {state: {hostIp: hote.ip}});
                 break;
@@ -88,13 +126,14 @@ export default function Overview() {
                             <span className={"availability-footer"}>0</span>
                         </div>
                         <div id={"hosts"}>
-                            {hosts.map((host) => {
+                            {hosts.map((host,index) => {
+                                if (index < 9)
                                 return (
                                     <div className={"host"} style={setBoxShadow(host)} onClick={() => {
                                         handleNav(host)
                                     }}>
                                         <p>Nom</p>
-                                        <p>{host.ip}</p>
+                                        <p>{host.hostname}</p>
                                     </div>);
                             })}
                         </div>
