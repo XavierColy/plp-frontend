@@ -1,5 +1,5 @@
 import SideBar from '../../components/sideBar/sideBar';
-import {useContext, useState} from 'react';
+import {useContext} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {IoAddCircleOutline} from 'react-icons/io5';
 import {hostsContext} from '../../utils/authContext.context';
@@ -66,7 +66,7 @@ export default function HostPage() {
                                 <p>Nom: {host.hostname}</p>
                                 <p>Machine: {host.machine}</p>
                                 <p>Adresse IP: {host.ip}</p>
-                                <p>Exporter: {host.jobName}</p>
+                                <p>Job: {host.jobName}</p>
                             </div>
                         );
                     })}
