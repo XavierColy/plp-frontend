@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Superv'INSA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Superv'INSA est une plateforme de surveillance réseau et système permettant aux utilisateurs et
+administrateurs de la salle 009T du bâtiment Abel de Pujol 3 d’avoir une vue en temps réel de 
+l’état de santé du réseau et des machines.
 
-## Available Scripts
+## Démarrer le projet
+Pour lancer le projet, il faut exécuter la commande`npm start` directement dans le répertoire
+home/vmadmin/supervinsa. L'application s'ouvrira automatiquement sur le port 8080 dans un 
+navigateur. Le cas échéant, ouvrez le navigateur et tapez l'url [http://supervinsa.fr:8080/](http://supervinsa.fr:8080/).
+Les identifiants sont :
+- identifiant: admin
+- mot de passe: vmadmin
 
-In the project directory, you can run:
+Au cas où le code aurait été modifié et que des dépendances auraient été ajoutées, il vous faudra 
+au préalable exécuter la commande `npm i` dans le même répertoire puis lancer l'application.
 
-### `npm start`
+## Comprendre le code
+Il y a exactement un fichier par page. Cela facilite donc la navigation, particulièrement pour les
+ exporters (job). 
+- node_exporter: Regarder le fichier src/pages/nodePage/nodePage.jsx
+- windows_exporter_client et windows_exporter_server: Regarder le fichier src/pages/windows/windows.jsx
+- snmp_exporter: Regarder le fichier src/pages/snmp/snmp.jsx
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Retirer un graphique
+Si vous souhaitez retirer des graphiques, il suffit de supprimer l'iframe correspondant dans le fichier 
+concerné en sachant que les graphiques sont affichés dans le même ordre que dans le code.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Ajouter un graphiqe
+Si vous souhaitez ajouter des graphiques, il faudra modifier les templates grafana. Pour ce faire, 
+vous devrez visiter l'url [http://localhost:3000/](http://localhost:3000/) et vous connecter avec 
+les identifiants admin et admin, respectiviment pour le mot de passe et le username. Allez dans Dashboards,
+et sélectionnez l'exporter concerné. Ajoutez votre graphique puis prenez connaissance du 'panelId' ce 
+celui-ci sur grafana. Vous le trouverez en cliquant sur share puis embed puis dans le lien qui vous sera affiché.
+Recensez uniquement le panelId. Enfin, dans le code, dans la page où vous voulez afficher le code,
+allez dans la section de votre choix. Faîtes un copier coller d'un iframe présent dans cette section et 
+remplacez le panelId par celui que vous avez recensé.
