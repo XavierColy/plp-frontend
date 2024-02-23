@@ -41,7 +41,7 @@ export default function Snmp() {
         setUrl(tmp);
     }, [url, from]);
     return (
-        <div id={"hostPage"}>
+        <div id={"nodePage"}>
             <SideBar></SideBar>
             <div id={"overview-main"}>
                 <div>

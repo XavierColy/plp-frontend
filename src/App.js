@@ -8,7 +8,7 @@ import Windows from './pages/windows/windows';
 import LoginPage from './pages/login/loginPage';
 import AuthGuard from './utils/authGuard';
 import ChangePasswd from './pages/login/changePasswd';
-import NodePage from './pages/hostPage/nodePage';
+import NodePage from './pages/nodePage/nodePage';
 
 function App() {
     return (

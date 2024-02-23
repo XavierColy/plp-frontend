@@ -48,7 +48,7 @@ export default function NodePage() {
     }
 
     return (
-        <div id={"hostPage"}>
+        <div id={"nodePage"}>
             <SideBar></SideBar>
             <div id={"overview-main"}>
                 <div>

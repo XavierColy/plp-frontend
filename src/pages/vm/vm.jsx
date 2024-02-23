@@ -47,7 +47,7 @@ export default function Vm() {
         setUrl(tmp);
     }, [url, from]);
     return (
-        <div id={"hostPage"}>
+        <div id={"nodePage"}>
             <SideBar></SideBar>
             <div id={"overview-main"}>
                 <div>
