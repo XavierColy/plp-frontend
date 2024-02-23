@@ -1,14 +1,17 @@
 import SideBar from '../../components/sideBar/sideBar';
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {IoAddCircleOutline} from 'react-icons/io5';
 import {hostsContext} from '../../utils/authContext.context';
+import Modal from 'react-modal';
 import './hostPage.css';
+import {HiOutlineClipboardCopy} from 'react-icons/hi';
 
 
 export default function HostPage() {
     const {hosts} = useContext(hostsContext);
     const navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleNav = (hote) => {
         switch (hote.jobName) {
@@ -51,8 +54,8 @@ export default function HostPage() {
                     <header>
                         <h1>Hôtes</h1>
                         <div id={"settings"}>
-                            <div className={"card"}>
-                                <IoAddCircleOutline />
+                            <div className={"card"} id={"add"} onClick={() => setIsOpen(true)}>
+                                <IoAddCircleOutline/>
                                 <span>Ajouter un hôte</span>
                             </div>
                         </div>
@@ -60,9 +63,11 @@ export default function HostPage() {
                     <div id={"divider"}></div>
                 </div>
                 <div id={"hosts_display"}>
-                    {hosts.map((host)=>{
-                        return(
-                            <div className={"card"} id={"host_display"} onClick={()=>{handleNav(host)}} style={setBoxShadow(host)}>
+                    {hosts.map((host) => {
+                        return (
+                            <div className={"card"} id={"host_display"} onClick={() => {
+                                handleNav(host)
+                            }} style={setBoxShadow(host)}>
                                 <p>Nom: {host.hostname}</p>
                                 <p>Machine: {host.machine}</p>
                                 <p>Adresse IP: {host.ip}</p>
@@ -71,7 +76,41 @@ export default function HostPage() {
                         );
                     })}
                 </div>
+                <Modal isOpen={isOpen}
+                       onRequestClose={() => setIsOpen(false)}
+                       contentLabel="Example Modal" style={customStyles}>
+                    <p>Pour ajouter un hôte, exécutez la commande suivante dans votre terminal.</p>
+                    <div id={"code_frame"}>
+                        <div>
+                            <span>bash</span>
+                            <div
+                                onClick={() =>
+                                    navigator.clipboard.writeText("sudo python3 /etc/vmagent/bin/add_hosts.py")
+                                        .then(() => {
+                                            setIsOpen(false)
+                                        })}
+                                id={"click"}>
+                                <HiOutlineClipboardCopy/>
+                                <span>Copier</span>
+                            </div>
+                        </div>
+                        <div>sudo python3 /etc/vmagent/bin/add_hosts.py</div>
+                    </div>
+                </Modal>
             </div>
         </div>
     );
 }
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: 'gray',
+        color: 'white'
+    },
+};

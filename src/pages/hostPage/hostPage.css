@@ -11,3 +11,34 @@
     overflow: hidden;
     cursor: pointer;
 }
+
+#add {
+    cursor: pointer;
+}
+
+#code_frame {
+    border-radius: 10px;
+    color: white;
+}
+
+#code_frame > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #2f2f2f;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 10px;
+}
+
+#code_frame > div:not(:first-child) {
+    background-color: black;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+}
+
+#click {
+    cursor: pointer;
+}
