@@ -13,16 +13,16 @@ export default function HostPage() {
     const handleNav = (hote) => {
         switch (hote.jobName) {
             case "node_exporter":
-                navigate(`/nodeExporter/${hote.hostname}`, {state: {hostIp: hote.ip}});
+                navigate(`/nodeExporter`, {state: {hostIp: hote.ip}});
                 break;
             case "windows_exporter_client":
-                navigate(`/windows/${hote.hostname}`, {state: {hostIp: hote.ip}});
+                navigate(`/windows`, {state: {hostIp: hote.ip}});
                 break;
             case "windows_exporter_server":
-                navigate(`/windows/${hote.hostname}`, {state: {hostIp: hote.ip}});
+                navigate(`/windows`, {state: {hostIp: hote.ip}});
                 break;
             case "snmp_exporter":
-                navigate('/snmpExporter', {state: {hostIp: hote.ip}});
+                navigate('/snmpExporter');
                 break;
         }
     }

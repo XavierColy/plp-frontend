@@ -1,14 +1,16 @@
 import SideBar from '../../components/sideBar/sideBar';
 import {LuRefreshCcw} from 'react-icons/lu';
 import {FaCaretDown} from 'react-icons/fa';
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {IoMdTime} from 'react-icons/io';
-import {useLocation, useParams} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
+import {hostsContext} from '../../utils/authContext.context';
 
 export default function Windows() {
     const hostIp = useLocation().state.hostIp;
+    const {hosts} = useContext(hostsContext);
+    const host = hosts.find((h)=>h.ip === hostIp);
     const vmIp = 'localhost';
-    const {hostname} = useParams();
     const [refreshTime, setRefreshTime] = useState('10s');
     const [from, setFrom] = useState('24h');
     const [url, setUrl] = useState(`http://${vmIp}:3000/d-solo/PPZJb6qMk-2/windows-exporter-node?orgId=1&theme=light&from=now-${from}&to=now&refresh=${refreshTime}`);
@@ -52,7 +54,7 @@ export default function Windows() {
             <div id={"overview-main"}>
                 <div>
                     <header>
-                        <h1>{hostname} : Vue d'ensemble</h1>
+                        <h1>{host.hostname === "" ? '' : host.hostname + ' : ' }Vue d'ensemble</h1>
                         <div id={"settings"}>
                             <div className={"card"}>
                                 <IoMdTime/>

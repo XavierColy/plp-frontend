@@ -2,14 +2,16 @@ import './nodePage.css'
 import SideBar from '../../components/sideBar/sideBar';
 import {LuRefreshCcw} from 'react-icons/lu';
 import {FaCaretDown} from 'react-icons/fa';
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {IoMdTime} from 'react-icons/io';
-import {useLocation, useParams} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
+import {hostsContext} from '../../utils/authContext.context';
 
 export default function NodePage() {
     const hostIp = useLocation().state.hostIp;
     const vmIp = 'localhost';
-    const {hostname} = useParams();
+    const {hosts} = useContext(hostsContext);
+    const host = hosts.find((h)=>h.ip === hostIp);
     const [refreshTime, setRefreshTime] = useState('10s');
     const [from, setFrom] = useState('24h');
     const [url, setUrl] = useState(`http://${vmIp}:3000/d-solo/rYdddlPWk/node-exporter-full?orgId=1&var-DS_PROMETHEUS=db5dabec-a472-48a0-82a8-b0a2a74c9a8d&var-job=node_exporter&var-node=${hostIp}%3A9100&var-diskdevices=%5Ba-z%5D%2B%7Cnvme%5B0-9%5D%2Bn%5B0-9%5D%2B%7Cmmcblk%5B0-9%5D%2B&theme=light&from=now-${from}&to=now&refresh=${refreshTime}`);
@@ -53,7 +55,7 @@ export default function NodePage() {
             <div id={"overview-main"}>
                 <div>
                     <header>
-                        <h1>{hostname} : Vue d'ensemble</h1>
+                        <h1>{host.hostname === "" ? '' : host.hostname + ' : ' }Vue d'ensemble</h1>
                         <div id={"settings"}>
                             <div className={"card"}>
                                 <IoMdTime/>

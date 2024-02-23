@@ -18,9 +18,9 @@ function App() {
                     <Route index path={'/login'} element={<LoginPage/>}/>
                     <Route element={<AuthGuard/>}>
                         <Route path={'/overview'} element={<Overview/>}/>
-                        <Route path={'/nodeExporter/:hostname'} element={<NodePage/>}/>
+                        <Route path={'/nodeExporter'} element={<NodePage/>}/>
                         <Route path={'/snmpExporter'} element={<Snmp/>}/>
-                        <Route path={'/windows/:hostname'} element={<Windows/>}/>
+                        <Route path={'/windows'} element={<Windows/>}/>
                         <Route path={'/hosts'} element={<HostPage/>}/>
                     </Route>
                 </Routes>
