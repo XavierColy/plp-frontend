@@ -1,0 +1,61 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+  #rule_files: [] # Si vous avez des fichiers de règles, vous pouvez les spécifier ici
+
+scrape_configs:
+  - job_name: vmagent
+    static_configs:
+      - targets:
+        - localhost:8428/metrics  # VMagent stat
+
+  - job_name: node_exporter  # Add Linux machines IP below
+    static_configs:
+      - targets:
+        - "https://192.168.9.253:9100"  # Machine: DHCP & FOG Server Hostname: 
+    tls_config:
+      insecure_skip_verify: true # en cas de certificat SSL ne contennant pas de sujet alternatif (SAN) pour l'adresse IP
+
+  - job_name: windows_exporter_client # Add windows clients IP below
+    static_configs:
+      - targets:
+        - "https://192.168.9.143:9182"  # Machine: Windows 10 Hostname: P4-3
+        - "https://192.168.9.102:9182"  # Machine: Windows 10 Hostname:
+        - "https://192.168.9.104:9182"  # Machine: Windows 10 Hostname: 
+        - "https://192.168.9.110:9182"  # Machine: Windows 10 Hostname: 
+        - "https://192.168.9.113:9182"  # Machine: Windows 10 Hostname:
+        - "https://192.168.9.160:9182"  # Machine: Windows 10 Hostname: 
+	
+    tls_config:
+      insecure_skip_verify: true # en cas de certificat SSL ne contennant pas de sujet alternatif (SAN) pour l'adresse IP
+
+  - job_name: windows_exporter_server # Add windows client IP below
+    static_configs:
+      - targets:
+        - "https://192.168.10.200:9182"  # Machine: Windows Server 2022 Hostname:
+    tls_config:
+      insecure_skip_verify: true # en cas de certificat SSL ne contennant pas de sujet alternatif (SAN) pour l'adresse IP 
+
+  - job_name: snmp_exporter # Switch / Router
+    static_configs:
+      - targets:
+        - 192.168.9.103  # Machine: Cisco switch Hostname:
+        - 192.168.9.133  # Machine: Cisco switch Hostname:
+    metrics_path: /snmp
+    params:
+      #auth: [public_v2] # For routers
+      module: [if_mib] # Must be activated on switches
+      community: [public]  # Utilisation de la chaîne de communauté SNMP "public"
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: localhost:9116  # VMAgent get SNMP metrics from Switch
+
+
+#  - job_name: blackbox_exporter
+#    static_configs:
+#      - targets:
+#        - localhost:9100  # VictoriaMetrics Server get metrics from probing endpoints

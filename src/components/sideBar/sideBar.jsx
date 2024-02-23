@@ -8,10 +8,14 @@ export default function SideBar() {
     const navigate = useNavigate();
     return(
         <nav>
-            <h1 onClick={()=>{navigate('/')}}>Superv'INSA</h1>
-            <div onClick={()=>{navigate('/')}}>
+            <h1 onClick={()=>{navigate('/overview')}}>Superv'INSA</h1>
+            <div onClick={()=>{navigate('/overview')}}>
                 <HiMiniSquares2X2 className={"icon"}/>
                 <span>Accueil</span>
+            </div>
+            <div onClick={()=>{navigate('vm')}}>
+                <HiMiniSquares2X2 className={"icon"}/>
+                <span>VictoriaMetrics</span>
             </div>
             <div id={'bottom-bar-top'}>
                 <FaQuestionCircle className={"icon"}/>

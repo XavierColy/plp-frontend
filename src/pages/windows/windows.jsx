@@ -3,10 +3,11 @@ import {LuRefreshCcw} from 'react-icons/lu';
 import {FaCaretDown} from 'react-icons/fa';
 import {useEffect, useState} from 'react';
 import {IoMdTime} from 'react-icons/io';
+import {useLocation} from 'react-router-dom';
 
 export default function Windows() {
-    const hostIp = '192.168.43.34';
-    const vmIp = '192.168.43.200';
+    const hostIp = useLocation().state.hostIp;
+    const vmIp = 'localhost';
     const hostname = "FOG Server";
     const [refreshTime, setRefreshTime] = useState('10s');
     const [from, setFrom] = useState('24h');

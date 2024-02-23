@@ -1,7 +1,7 @@
 #overview-main {
     margin-left: 200px;
     margin-top: 0;
-    padding: 50px 40px 10px;
+    padding: 30px 40px 10px;
 }
 
 #overview-main h1 {
@@ -56,10 +56,10 @@ main h2 {
 .host {
     text-align: center;
     border-radius: 10px;
-    box-shadow: 2px 4px 4px 2px var(--green-bright);
     background-color: white;
     width: 128px;
     height: 128px;
+    cursor: pointer;
 }
 
 .host > p:first-child {
