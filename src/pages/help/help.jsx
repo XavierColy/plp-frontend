@@ -1,4 +1,5 @@
 import SideBar from '../../components/sideBar/sideBar';
+import {HiOutlineClipboardCopy} from 'react-icons/hi';
 
 export default function Help() {
     return (
@@ -21,9 +22,43 @@ export default function Help() {
                         le réseau de surveillance.</p>
                     <p>Pour faciliter la différenciation des hôtes, un code couleur a été appliqué en fonction du Job de
                         la machine.</p>
-                    <h3>Ajouter et supprimer des hôtes</h3>
-                    <p>Pour ajouter des hôtes, se référer à la page des hôtes</p>
-                    <p>Pour supprimer des hôtes, éditez le fichier /etc/vmagent/conf/vmagent.yml se trouvant dans le répertoire local</p>
+                    <h3>Ajouter des hôtes</h3>
+                    <p>Executez la commande suivante</p>
+                    <div id={"code_frame"}>
+                        <div>
+                            <span>bash</span>
+                            <div
+                                onClick={() =>
+                                    navigator.clipboard.writeText("su\nsudo python3 /etc/vmagent/bin/add_hosts.py")}
+                                id={"click"}>
+                                <HiOutlineClipboardCopy/>
+                                <span>Copier</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>su</p>
+                            <p>sudo python3 /etc/vmagent/bin/add_hosts.py</p>
+                        </div>
+                    </div>
+                    <h3>Supprimer des hôtes</h3>
+
+                    <p>Executez la commande suivante</p>
+                    <div id={"code_frame"}>
+                        <div>
+                            <span>bash</span>
+                            <div
+                                onClick={() =>
+                                    navigator.clipboard.writeText("su\nsudo python3 /etc/vmagent/bin/remove_hosts.py")}
+                                id={"click"}>
+                                <HiOutlineClipboardCopy/>
+                                <span>Copier</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>su</p>
+                            <p>sudo python3 /etc/vmagent/bin/remove_hosts.py</p>
+                        </div>
+                    </div>
                     <h3>Créer et supprimer des graphiques</h3>
                     <p>Pour ce faire, se référer au README qui se trouve dans le répertoire home/vmadmin/supervinsa</p>
                 </div>
