@@ -85,7 +85,7 @@ export default function HostPage() {
                             <span>bash</span>
                             <div
                                 onClick={() =>
-                                    navigator.clipboard.writeText("sudo python3 /etc/vmagent/bin/add_hosts.py")
+                                    navigator.clipboard.writeText("su\nsudo python3 /etc/vmagent/bin/add_hosts.py")
                                         .then(() => {
                                             setIsOpen(false)
                                         })}
@@ -94,23 +94,41 @@ export default function HostPage() {
                                 <span>Copier</span>
                             </div>
                         </div>
-                        <div>sudo python3 /etc/vmagent/bin/add_hosts.py</div>
+                        <div>
+                            <p>su</p>
+                            <p>sudo python3 /etc/vmagent/bin/add_hosts.py</p>
+                        </div>
                     </div>
                 </Modal>
             </div>
         </div>
-    );
+);
 }
 
 const customStyles = {
     content: {
         top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-        backgroundColor: 'gray',
-        color: 'white'
-    },
+            left
+    :
+        '50%',
+            right
+    :
+        'auto',
+            bottom
+    :
+        'auto',
+            marginRight
+    :
+        '-50%',
+            transform
+    :
+        'translate(-50%, -50%)',
+            backgroundColor
+    :
+        'gray',
+            color
+    :
+        'white'
+    }
+,
 };
