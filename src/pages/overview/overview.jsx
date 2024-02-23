@@ -1,8 +1,7 @@
 import SideBar from '../../components/sideBar/sideBar';
 import './overview.css'
 import {FaCaretDown} from 'react-icons/fa';
-import yaml from './vmagent.yml'
-import {useContext, useEffect, useState} from 'react';
+import {useContext} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {hostsContext} from '../../utils/authContext.context';
 
