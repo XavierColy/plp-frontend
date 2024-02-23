@@ -5,7 +5,7 @@ administrateurs de la salle 009T du bâtiment Abel de Pujol 3 d’avoir une vue 
 l’état de santé du réseau et des machines.
 
 ## Démarrer le projet
-Pour lancer le projet, il faut exécuter la commande`npm start` directement dans le répertoire
+Pour lancer le projet, il faut exécuter la commande`sudo systemctl restart supervinsa` directement dans le répertoire
 home/vmadmin/supervinsa. L'application s'ouvrira automatiquement sur le port 8080 dans un 
 navigateur. Le cas échéant, ouvrez le navigateur et tapez l'url [http://supervinsa.fr:8080/](http://supervinsa.fr:8080/).
 Les identifiants sont :
